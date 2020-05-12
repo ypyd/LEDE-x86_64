@@ -7,7 +7,10 @@
 #=================================================
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.11.33/g' package/base-files/files/bin/config_generate
+
 git clone https://github.com/kenzok8/litte.git package/litte
+git clone https://github.com/kenzok8/small.git package/small
+
 rm -rf package/lean/luci-theme-argon
 sed -i 's/LuCI Master/LuCI master by kenzo/g' /usr/lib/lua/luci/version.lua
 sed -i '/luciversion/d' /usr/lib/lua/luci/version.lua
